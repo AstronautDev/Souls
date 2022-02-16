@@ -1,0 +1,6 @@
+name: Souls
+version: 1.0.0
+api-version: 1.18
+main: com.astronaut.souls.Souls
+description: A soul plugin for souls.
+author: Astronaut
