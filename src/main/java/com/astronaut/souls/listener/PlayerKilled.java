@@ -3,6 +3,7 @@ package com.astronaut.souls.listener;
 import com.astronaut.souls.Souls;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -22,7 +23,7 @@ public class PlayerKilled implements Listener {
 
     @EventHandler
     public void onPlayerKilled(PlayerDeathEvent e) {
-        if(!(e.getEntity().getKiller() instanceof Player)) {
+        if((e.getEntity().getKiller() instanceof Player)) {
             ItemStack soul = new ItemStack(Material.ENDER_EYE);
             ItemMeta soulMeta = soul.getItemMeta();
             soulMeta.setDisplayName(ChatColor.LIGHT_PURPLE + e.getEntity().getDisplayName().toUpperCase() + "'S SOUL");
